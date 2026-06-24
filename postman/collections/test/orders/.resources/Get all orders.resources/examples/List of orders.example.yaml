@@ -1,0 +1,63 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/orders"
+  method: GET
+  headers:
+    Accept: application/json
+  body:
+    type: text
+    content: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      [
+        {
+          "id": 1112,
+          "userId": 7543,
+          "productId": 8135,
+          "quantity": 6715,
+          "status": "pending"
+        },
+        {
+          "id": 5394,
+          "userId": 3816,
+          "productId": 9328,
+          "quantity": 1866,
+          "status": "completed"
+        }
+      ]
+    $type: |-
+      {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "userId": {
+              "type": "integer"
+            },
+            "productId": {
+              "type": "integer"
+            },
+            "quantity": {
+              "type": "integer"
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "pending",
+                "completed",
+                "cancelled"
+              ]
+            }
+          }
+        }
+      }
+order: 1000

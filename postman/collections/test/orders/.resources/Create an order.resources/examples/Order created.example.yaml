@@ -1,0 +1,57 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/orders"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "userId": 8104,
+        "productId": 6378,
+        "quantity": 5650
+      }
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": 1130,
+        "userId": 2661,
+        "productId": 4120,
+        "quantity": 7268,
+        "status": "cancelled"
+      }
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "userId": {
+            "type": "integer"
+          },
+          "productId": {
+            "type": "integer"
+          },
+          "quantity": {
+            "type": "integer"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "completed",
+              "cancelled"
+            ]
+          }
+        }
+      }
+order: 1000

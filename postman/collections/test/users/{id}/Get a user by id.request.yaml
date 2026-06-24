@@ -1,0 +1,25 @@
+$kind: http-request
+url: "{{baseUrl}}/users/:id"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: "764"
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "value"
+        ]
+      }
+body:
+  type: text
+  content: ""
+examples: ./.resources/Get a user by id.resources/examples
+order: 1000

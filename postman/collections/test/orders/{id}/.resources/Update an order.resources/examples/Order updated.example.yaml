@@ -1,0 +1,58 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/orders/:id"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    id: "764"
+  body:
+    type: json
+    content: |-
+      {
+        "quantity": 9641,
+        "status": "completed"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": 1130,
+        "userId": 2661,
+        "productId": 4120,
+        "quantity": 7268,
+        "status": "cancelled"
+      }
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "userId": {
+            "type": "integer"
+          },
+          "productId": {
+            "type": "integer"
+          },
+          "quantity": {
+            "type": "integer"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "completed",
+              "cancelled"
+            ]
+          }
+        }
+      }
+order: 1000

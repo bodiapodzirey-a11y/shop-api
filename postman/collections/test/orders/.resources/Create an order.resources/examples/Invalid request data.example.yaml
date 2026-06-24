@@ -1,0 +1,36 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/orders"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "userId": 8104,
+        "productId": 6378,
+        "quantity": 5650
+      }
+response:
+  statusCode: 400
+  statusText: Bad Request
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "error": "string"
+      }
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string"
+          }
+        }
+      }
+order: 2000
