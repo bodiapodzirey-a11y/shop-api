@@ -14,7 +14,7 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  const { name, price, stock, category, description } = req.body;
+  const { name, price, stock, category, description, filialId } = req.body;
   if (!name || price === undefined) {
     return res.status(400).json({ error: "name and price are required" });
   }
@@ -25,6 +25,7 @@ router.post("/", (req, res) => {
     stock: stock ?? 0,
     category: category ?? null,
     description: description ?? null,
+    filialId: filialId ?? null,
   };
   products.push(product);
   res.status(201).json(product);
@@ -33,12 +34,13 @@ router.post("/", (req, res) => {
 router.put("/:id", (req, res) => {
   const product = products.find((p) => p.id === Number(req.params.id));
   if (!product) return res.status(404).json({ error: "Product not found" });
-  const { name, price, stock, category, description } = req.body;
+  const { name, price, stock, category, description, filialId } = req.body;
   if (name !== undefined) product.name = name;
   if (price !== undefined) product.price = price;
   if (stock !== undefined) product.stock = stock;
   if (category !== undefined) product.category = category;
   if (description !== undefined) product.description = description;
+  if (filialId !== undefined) product.filialId = filialId;
   res.json(product);
 });
 
