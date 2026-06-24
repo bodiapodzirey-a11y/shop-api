@@ -269,6 +269,9 @@ components:
         description:
           type: string
           nullable: true
+        sku:
+          type: string
+          nullable: true
     ProductInput:
       type: object
       required: [name, price]
@@ -282,6 +285,8 @@ components:
         category:
           type: string
         description:
+          type: string
+        sku:
           type: string
     User:
       type: object

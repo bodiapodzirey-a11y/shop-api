@@ -25,7 +25,7 @@
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"Нова клавіатура\",\n  \"price\": 1599,\n  \"stock\": 15,\n  \"category\": \"Електроніка\",\n  \"description\": \"Механічна клавіатура з підсвіткою\"\n}"
+              "raw": "{\n  \"name\": \"Нова клавіатура\",\n  \"price\": 1599,\n  \"stock\": 15,\n  \"category\": \"Електроніка\",\n  \"description\": \"Механічна клавіатура з підсвіткою\",\n  \"sku\": \"KB-1599-BL\"\n}"
             },
             "url": "{{baseUrl}}/products"
           }

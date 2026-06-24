@@ -1,0 +1,24 @@
+workspace:
+  id: 87b35cea-618e-46d6-8ccc-1bdedf206567
+
+localResources:
+  collections:
+    - ..\shop-api.postman_collection.json
+    - ../shop-api.postman_collection.json
+  specs:
+    - ..\openapi.en.json
+    - ..\openapi.json
+    - ..\openapi.yaml
+    - ../openapi.en.json
+    - ../openapi.json
+    - ../openapi.yaml
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
+cloudResources:
+  collections:
+    ../shop-api.postman_collection.json: 17797307-c42d47aa-df09-4c90-91df-e339e84fe5d3
+  specs:
+    ../openapi.en.json: b093bb0f-2b73-444d-a0c9-a1a5a6d56b3c
+    ../openapi.json: 5e4239de-4478-42f9-8645-4de1e53aff66
+    ../openapi.yaml: a75c6eed-14c5-4b3b-8047-8abd690c058d
