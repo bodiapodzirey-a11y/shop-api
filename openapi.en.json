@@ -27,7 +27,19 @@
         "tags": ["Products"],
         "requestBody": {
           "required": true,
-          "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ProductInput" } } }
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/ProductInput" },
+              "example": {
+                "name": "Wireless Keyboard",
+                "price": 1599,
+                "stock": 15,
+                "category": "Electronics",
+                "description": "Backlit mechanical keyboard",
+                "sku": "KB-1599-BL"
+              }
+            }
+          }
         },
         "responses": {
           "201": {
@@ -56,7 +68,16 @@
         "tags": ["Products"],
         "requestBody": {
           "required": true,
-          "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ProductInput" } } }
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/ProductInput" },
+              "example": {
+                "price": 1399,
+                "stock": 20,
+                "sku": "KB-1399-BL"
+              }
+            }
+          }
         },
         "responses": {
           "200": {
