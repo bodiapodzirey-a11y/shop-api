@@ -35,8 +35,7 @@
                 "price": 1599,
                 "stock": 15,
                 "category": "Electronics",
-                "description": "Backlit mechanical keyboard",
-                "filialId": "FIL-001"
+                "description": "Backlit mechanical keyboard"
               }
             }
           }
@@ -73,8 +72,7 @@
               "schema": { "$ref": "#/components/schemas/ProductInput" },
               "example": {
                 "price": 1399,
-                "stock": 20,
-                "filialId": "FIL-002"
+                "stock": 20
               }
             }
           }
@@ -265,8 +263,7 @@
           "price": { "type": "number" },
           "stock": { "type": "integer" },
           "category": { "type": "string", "nullable": true },
-          "description": { "type": "string", "nullable": true },
-          "filialId": { "type": "string", "nullable": true }
+          "description": { "type": "string", "nullable": true }
         }
       },
       "ProductInput": {
@@ -277,8 +274,7 @@
           "price": { "type": "number" },
           "stock": { "type": "integer" },
           "category": { "type": "string" },
-          "description": { "type": "string" },
-          "filialId": { "type": "string" }
+          "description": { "type": "string" }
         }
       },
       "User": {
