@@ -1,4 +1,0 @@
-$kind: collection
-description: A small demo API for an online shop (Products, Users, Orders)
-variables:
-  baseUrl: http://localhost:3000

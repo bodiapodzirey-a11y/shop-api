@@ -1,0 +1,4 @@
+$kind: collection
+name: Shop API
+variables:
+  baseUrl: http://localhost:3000

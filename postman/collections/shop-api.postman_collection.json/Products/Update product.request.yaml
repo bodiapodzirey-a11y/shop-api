@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{baseUrl}}/products/1"
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "price": 1399,
+      "stock": 20
+    }
+order: 4000

@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{baseUrl}}/users/1"
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "email": "new-email@example.com"
+    }
+order: 4000

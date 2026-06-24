@@ -1,0 +1,17 @@
+$kind: http-request
+name: Create product
+url: "{{baseUrl}}/products"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "тест",
+      "price": 100,
+      "stock": 100,
+      "category": "Електроніка",
+      "description": "Механічна клавіатура з підсвіткою"
+    }
+order: 3000
